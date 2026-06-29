@@ -1,18 +1,26 @@
+# QBCore Framework (2023 Custom Business Edition)
 
-# QBCore Framework (2023 Custom Edit)
+This is an archived/customized version of the 2023 QBCore Framework. The framework has been extended with a custom business system by introducing dedicated player business metadata and database support.
 
-This is an archived/modified version of the 2023 QBCore Framework core. It has been custom-edited to include advanced gang system routing directly in the core, as well as a custom business metadata structure.
+> **Note:** This is based on the 2023 version of QBCore. It is archived, not actively maintained, and may not be fully compatible with newer FiveM artifacts or the latest QBCore resources.
 
-> **Note:** This is an older version of QBCore (2023). It is not actively maintained and may not be fully compatible with modern 2026 FiveM artifacts or newer QBCore scripts.
+## Custom Additions
 
-## Features Added
-* Custom Gang System integrated directly into core files.
-* Custom `business` metadata and dedicated database column added for players.
+* Added custom `business` player metadata.
+* Integrated business data into the player save/load system.
+* Added support for storing business information in the database.
 
 ## Database Installation
-Because this core modifies how player data is saved, you **must** add the `business` column to your `players` table before starting the server. 
 
-Run this SQL query in your database (HeidiSQL, phpMyAdmin, etc.):
+This version requires an additional `business` column in the `players` table.
+
+Run the following SQL query before starting the server:
 
 ```sql
-ALTER TABLE `players` ADD COLUMN `business` LONGTEXT DEFAULT NULL;
+ALTER TABLE `players`
+ADD COLUMN `business` LONGTEXT DEFAULT NULL;
+```
+
+## Repository Purpose
+
+This repository preserves a customized 2023 QBCore core with business system support for learning, archival, and portfolio purposes.
